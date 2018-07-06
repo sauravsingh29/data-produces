@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: irtlsdata
+          binder: kafka1
+          producer:
+            error-channel-enabled: true
+      binders:
+        kafka1:
+          type: kafka
